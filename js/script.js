@@ -97,4 +97,37 @@ function setClock(selector, endtime) {
 
  setClock('.timer', deadline);
 
+ //Modal
+
+const modalBtns = document.querySelectorAll('[data-modal]'),
+      modalClose = document.querySelector('[data-close]'),
+      modal = document.querySelector('.modal');
+
+function modalToggle() {
+   
+
+    modalBtns.forEach (btn => {
+
+        btn.addEventListener('click', ()=> {
+
+            if (modal.classList.contains('hide')) {
+                modal.classList.remove('hide', 'disappearance' );
+                modal.classList.add('show', 'appearance');
+
+            }else {
+                modal.classList.remove('show', 'appearance');
+                modal.classList.add('hide', 'disappearance');
+            }
+    
+        } );
+    });
+
+    modalClose.addEventListener('click',()=>{
+        modal.classList.remove('show','appearance');
+        modal.classList.add('hide','disappearance');
+    });
+}
+
+modalToggle();
+
 });
