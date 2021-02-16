@@ -99,34 +99,64 @@ function setClock(selector, endtime) {
 
  //Modal
 
-const modalBtns = document.querySelectorAll('[data-modal]'),
-      modalClose = document.querySelector('[data-close]'),
-      modal = document.querySelector('.modal');
-
 function modalToggle() {
+
+    const modalTrigger = document.querySelectorAll('[data-modal]'),
+          modalCloseBtn = document.querySelector('[data-close]'),
+          modal = document.querySelector('.modal'),
+          body = document.querySelector('body');
+
+    function openModal() {
+        modal.classList.remove('disappearance' );
+        modal.classList.add('appearance');
+        body.classList.add('scroll-off');
+        clearInterval(modalTimerId);
+    }
+
+    modalTrigger.forEach (btn => {
+
+        btn.addEventListener('click',openModal);
+    });
+
    
 
-    modalBtns.forEach (btn => {
+    function closeModal() {
+        body.classList.remove('scroll-off');
+        modal.classList.remove('appearance');
+        modal.classList.add('disappearance');
+    }
 
-        btn.addEventListener('click', ()=> {
+    modalCloseBtn.addEventListener('click', closeModal );
 
-            if (modal.classList.contains('hide')) {
-                modal.classList.remove('hide', 'disappearance' );
-                modal.classList.add('show', 'appearance');
+    modal.addEventListener('click',(e) =>{
 
-            }else {
-                modal.classList.remove('show', 'appearance');
-                modal.classList.add('hide', 'disappearance');
-            }
+    if (e.target === modal){
+        closeModal();
+    }
+
+    });
+
+    document.addEventListener('keydown', (e) =>{
+        if (e.code ==='Escape' && modal.classList.contains('appearance')){
+            closeModal();
+        }
+
+    });
+
+    const modalTimerId = setTimeout(openModal, 5000);
+
+    function showModalByScrool() {
+        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+            openModal();
+            window.removeEventListener('scroll',showModalByScrool);
+        }
+    }
+
+    window.addEventListener('scroll',showModalByScrool);
     
-        } );
-    });
-
-    modalClose.addEventListener('click',()=>{
-        modal.classList.remove('show','appearance');
-        modal.classList.add('hide','disappearance');
-    });
 }
+
+
 
 modalToggle();
 
