@@ -1,0 +1,19 @@
+{
+  "name": "javascript-in-action",
+  "version": "1.0.0",
+  "description": "learn JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taras-Slovak/JavaScript-in-action.git"
+  },
+  "author": "Taras Slovak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Taras-Slovak/JavaScript-in-action/issues"
+  },
+  "homepage": "https://github.com/Taras-Slovak/JavaScript-in-action#readme"
+}
