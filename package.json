@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Taras-Slovak/JavaScript-in-action/issues"
   },
-  "homepage": "https://github.com/Taras-Slovak/JavaScript-in-action#readme"
+  "homepage": "https://github.com/Taras-Slovak/JavaScript-in-action#readme",
+  "devDependencies": {
+    "json-server": "^0.16.3"
+  }
 }
