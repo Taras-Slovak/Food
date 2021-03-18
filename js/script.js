@@ -283,6 +283,7 @@ window.addEventListener('DOMContentLoaded', function() {
     const prev = document.querySelector('.offer__slider-prev'),
           next = document.querySelector('.offer__slider-next'),
           slides = document.querySelectorAll('.offer__slide'),
+          slider = document.querySelector('.offer__slider'),
           total = document.querySelector('#total'),
           current = document.querySelector('#current'),
           slidesWrapper = document.querySelector('.offer__slider-wrapper'),
@@ -304,12 +305,24 @@ window.addEventListener('DOMContentLoaded', function() {
         slide.style.width = width;
     });
 
+    slider.style.position = 'relative';
+
+    const indicators = document.createElement('ol');
+    indicators.classList.add('carousel-indicators');
+
+    slider.append(indicators);
+
+    for (let i = 0; i < slides.length; i++) {
+        const dot = document.createElement('li');
+        dot.setAttribute('data-slide-to', i + 1);
+        
+    }
 
     next.addEventListener('click', () => {
-        if (offset == (+width.slice(0, width.length - 2) * (slides.length - 1))) {
+        if (offset == +width.replace(/\D/g, '') * (slides.length - 1)) {
             offset = 0;
         } else {
-            offset += +width.slice(0, width.length - 2);
+            offset += +width.replace(/\D/g, '');
         }
     
         slidesField.style.transform = `translateX(-${offset}px)`;
@@ -329,10 +342,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
     prev.addEventListener('click', () => {
         if (offset == 0) {
-            offset = +width.slice(0, width.length - 2) * (slides.length - 1);
+            offset = +width.replace(/\D/g, '') * (slides.length - 1);
             
         } else {
-            offset -= +width.slice(0, width.length - 2);
+            offset -= +width.replace(/\D/g, '');
         }
     
         slidesField.style.transform = `translateX(-${offset}px)`;
