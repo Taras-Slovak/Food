@@ -513,11 +513,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 
 
-function tabs(tabsSelector, tabsContenSelector, tabsParensSelector, aciveClass) {
+function tabs(tabsSelector, tabsContentSelector, tabsParentSelector, aciveClass) {
       
 	let tabs = document.querySelectorAll(tabsSelector),
-    tabsContent = document.querySelectorAll(tabsContenSelector),
-    tabsParent = document.querySelector(tabsParensSelector);
+        tabsContent = document.querySelectorAll(tabsContentSelector),
+        tabsParent = document.querySelector(tabsParentSelector);
 
     function hideTabContent() {
         
@@ -542,7 +542,7 @@ function tabs(tabsSelector, tabsContenSelector, tabsParensSelector, aciveClass) 
 
     tabsParent.addEventListener('click', function(event) {
         const target = event.target;
-        if(target && target.classList.contains(aciveClass.slice(1))) {
+        if(target && target.classList.contains(tabsSelector.slice(1))) {
             tabs.forEach((item, i) => {
                 if (target == item) {
                     hideTabContent();
