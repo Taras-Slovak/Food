@@ -1,4 +1,4 @@
-# JavaScript-in-action
+# JavaScript in action
 
 I studied pure javascript in action in this food page.
 Below I noted what technologies I applied and what elements I created.
