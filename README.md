@@ -5,7 +5,7 @@ https://taras-slovak.github.io/JavaScript-in-action/
 
 Below I noted what technologies I applied and what elements I created.
 
-I learned following:
+I learned following skills:
 - ClassList and delegation of events.
 - Scripts and their execution time. setTimeout and setInterval.
 - Working with dates.
@@ -34,7 +34,7 @@ I learned following:
 - JS animations, requestAnimationFrame.
 - Event loop.
 
-I created following:
+I created following elements:
 - Tabs.
 - Countdown timer.
 - Modal window.
