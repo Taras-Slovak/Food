@@ -32,13 +32,13 @@ I learned following:
 - JS animations, requestAnimationFrame.
 - Event loop.
 
-I created following
-- Created tabs.
-- Created a countdown timer.
-- Created a modal window.
+I created following:
+- Tabs.
+- Countdown timer.
+- Modal window.
 - Modified of modal window.
-- Created a spinner.
-- Created a slider. Version 1.
-- Created a slider. Version 2.
-- Created a navigation for slides.
-- Created a calculator.
+- Spinner.
+- Slider. Version 1.
+- Slider. Version 2.
+- Navigation for slides.
+- Calculator.
