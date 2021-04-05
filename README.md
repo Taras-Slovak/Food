@@ -1,6 +1,8 @@
 # JavaScript in action
 
-I studied pure javascript in action in this food page.
+I studied pure javascript in action and created this food page.
+https://taras-slovak.github.io/JavaScript-in-action/
+
 Below I noted what technologies I applied and what elements I created.
 
 I learned following:
