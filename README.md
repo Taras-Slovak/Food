@@ -3,7 +3,7 @@
 I studied pure javascript in action and created this food page.
 https://taras-slovak.github.io/JavaScript-in-action/
 
-Below I noted what technologies I applied and what elements I created.
+Below noted what technologies I applied and what elements I created.
 
 I learned following skills:
 - ClassList and delegation of events.
